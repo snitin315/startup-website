@@ -73,7 +73,7 @@ export default function LandingPage(props) {
                 rel="noopener noreferrer"
               >
                 <i className="fas fa-play" />
-               <b style={{color:"black"}}>Register Here</b> 
+               <b style={{color:"#888"}}>Register Today</b> 
               </Button>
             </GridItem>
             <GridItem xs={12} sm={12} md={6}>

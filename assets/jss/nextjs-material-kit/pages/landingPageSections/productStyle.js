@@ -13,7 +13,9 @@ const productStyle = {
     textDecoration: "none"
   },
   description: {
-    color: "#999"
+    fontFamily : 'sans-sarif',
+    color: "#303030",
+    textAlign : "justify",
   }
 };
 
