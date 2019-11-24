@@ -14,6 +14,7 @@ import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
+import ParticlesContainer from "components/Particle/Particle.js"
 
 import styles from "assets/jss/nextjs-material-kit/pages/landingPage.js";
 
@@ -50,15 +51,17 @@ export default function LandingPage(props) {
         }}
         {...rest}
       />
-    <Parallax filter responsive style={{backgroundColor:"#28a796"}}>
+   
+    <Parallax filter responsive style={{backgroundColor:"#28a796"}}> 
+    <ParticlesContainer />
         <div className={classes.container}>
           <GridContainer style={flex}>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Where StartUp Meet Investors</h1>
+              <h2 className={classes.title}>Where StartUp Meet Investors</h2>
               <br />
               <Button
                 color="white"
-                size="lg"
+                size="md"
                 href="Register Here"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -72,7 +75,7 @@ export default function LandingPage(props) {
             </GridItem>
           </GridContainer>
         </div>
-      </Parallax>
+    </Parallax> 
       <div className={classNames(classes.main)}>
         <div className={classes.container}>
           <ProductSection />
