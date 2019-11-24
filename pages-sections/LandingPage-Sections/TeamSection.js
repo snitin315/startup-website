@@ -36,7 +36,10 @@ import sgrtlogo from "assets/img/sgrtlogo.jpeg"
 import negdlogo from "assets/img/negdlogo.jpeg"
 import thinklogo from "assets/img/thinklogo.jpeg"
 import gvlogo from "assets/img/gvlogo.png"
-import image1 from "assets/img/catA.jpeg";
+
+import x100 from "assets/img/100x.png"
+import huddle from "assets/img/huddle.png"
+import icici from "assets/img/icici-bank-logo.jpg"
 
 const useStyles = makeStyles(styles);
 
@@ -85,7 +88,7 @@ export default function TeamSection() {
   };
   
   return (
-    <div className={classes.section}>
+    <div className={classes.section} style={{marginTop:"-100px"}}>
       <h2 className={classes.title}>Partners & Promotors</h2>
       <br/>
       <div>
@@ -205,6 +208,29 @@ export default function TeamSection() {
                 </div>
             </GridItem>
           </Carousel>
+          <br/>
+          <h3 className={classes.title}>Special Invited Investors</h3>
+          <br/>
+          <GridContainer>
+            <GridItem xs={12} sm={12} md={4}>
+                <div>
+                    <img src={icici} height="100px" style={{maxWidth:"100%"}} />
+                    <h6 className={classes.description}><strong>ICICI BANK</strong></h6>
+                </div>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={4}>
+                <div>
+                    <img src={huddle} height="100px" style={{maxWidth:"100%"}} />
+                    <h6 className={classes.description}><strong>HUDDLE</strong></h6>
+                </div>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={4}>
+                <div>
+                    <img src={x100} height="100px" style={{maxWidth:"100%"}} />
+                    <h6 className={classes.description}><strong>100X VC</strong></h6>
+                </div>
+            </GridItem>          
+        </GridContainer>
       </div>
     </div>
   );

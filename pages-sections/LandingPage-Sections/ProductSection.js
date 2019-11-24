@@ -12,7 +12,7 @@ import Fade from 'react-reveal/Fade';
 import styles from "assets/jss/nextjs-material-kit/pages/landingPageSections/productStyle.js";
 
 //images
-import sideImage from "assets/img/startup-10.jpg"
+import sideImage from "assets/img/startup2.gif"
 
 const useStyles = makeStyles(styles);
 const flex = {
