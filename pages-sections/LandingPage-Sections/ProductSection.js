@@ -49,15 +49,6 @@ export default function ProductSection() {
           </p>
         </GridItem>
       </GridContainer>
-      <div>
-        <GridContainer>
-            <GridItem xs={12} sm={12} md={6} >
-              <Fade up delay={500}>
-               
-              </Fade>
-            </GridItem>
-        </GridContainer>
-      </div>
     </div>
   );
 }

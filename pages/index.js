@@ -21,7 +21,7 @@ import styles from "assets/jss/nextjs-material-kit/pages/landingPage.js";
 // Sections for this page
 import ProductSection from "pages-sections/LandingPage-Sections/ProductSection.js";
 import TeamSection from "pages-sections/LandingPage-Sections/TeamSection.js";
-import WorkSection from "pages-sections/LandingPage-Sections/WorkSection.js";
+import Category from "pages-sections/LandingPage-Sections/Category.js";
 
 //images
 import rocket from "../assets/img/rocket2.gif"
@@ -86,7 +86,7 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <ProductSection />
           <TeamSection />
-          <WorkSection />
+          <Category />
         </div>
       </div>
       <Footer />
