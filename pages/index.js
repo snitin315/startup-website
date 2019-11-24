@@ -15,7 +15,7 @@ import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 import ParticlesContainer from "components/Particle/Particle.js"
-
+import CharPose from "components/Charpose/Charpose.js"
 import styles from "assets/jss/nextjs-material-kit/pages/landingPage.js";
 
 // Sections for this page
@@ -37,17 +37,21 @@ export default function LandingPage(props) {
     display : "flex",
     alignItems : "center"
   }
+  const btn ={
+    borderRadius: "25px",
+    border : "1px solid #fff"
+  }
   return (
     <div>
       <Header
         color="transparent"
         routes={dashboardRoutes}
-        brand="StartUp"
+        brand="Universal-Inovators"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
           height: 400,
-          color: "white"
+          color: "primary"
         }}
         {...rest}
       />
@@ -57,17 +61,19 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <GridContainer style={flex}>
             <GridItem xs={12} sm={12} md={6}>
-              <h2 className={classes.title}>Where StartUp Meet Investors</h2>
+              <h2 className={classes.title}><CharPose text="Where StartUp Meet Investors" /></h2>
+              <h6 className={classes.title}>Let your dreams come true || Your Story Starts with us</h6>
               <br />
               <Button
+                style={btn}
                 color="white"
                 size="md"
-                href="Register Here"
+                href="/application-form"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i className="fas fa-play" />
-                Register Here
+               <b style={{color:"black"}}>Register Here</b> 
               </Button>
             </GridItem>
             <GridItem xs={12} sm={12} md={6}>
