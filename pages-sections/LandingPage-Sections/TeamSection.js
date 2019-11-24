@@ -9,16 +9,34 @@ import { makeStyles } from "@material-ui/core/styles";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
+import Carousel from "react-slick";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
 
 import styles from "assets/jss/nextjs-material-kit/pages/landingPageSections/teamStyle.js";
 
-import team1 from "assets/img/faces/avatar.jpg";
-import team2 from "assets/img/faces/christian.jpg";
-import team3 from "assets/img/faces/kendall.jpg";
+//images
+import ssclogo from "assets/img/ssclogo.png"
+import nitplogo from "assets/img/nitplogo.jpeg"
+import npclogo from "assets/img/npclogo.jpeg"
+import srgelogo from "assets/img/srgelogo.png"
+import setitlogo from "assets/img/setitlogo.png"
+import dilogo from "assets/img/dilogo.jpg"
+import uilogo from "assets/img/uilogo.jpeg"
+import minlogo from "assets/img/minlogo.png"
+import dmrlogo from "assets/img/dmrlogo.jpeg"
+import pkslogo from "assets/img/pkslogo.jpeg"
+import autologo from "assets/img/autologo.jpeg"
+import callogo from "assets/img/callogo.jpeg"
+import plucklogo from "assets/img/plucklogo.jpeg"
+import rtmlogo from "assets/img/rtmlogo.jpeg"
+import spainlogo from "assets/img/spainlogo.jpeg"
+import sgrtlogo from "assets/img/sgrtlogo.jpeg"
+import negdlogo from "assets/img/negdlogo.jpeg"
+import thinklogo from "assets/img/thinklogo.jpeg"
+import gvlogo from "assets/img/gvlogo.png"
+import image1 from "assets/img/catA.jpeg";
 
 const useStyles = makeStyles(styles);
 
@@ -26,137 +44,167 @@ export default function TeamSection() {
   const classes = useStyles();
   const imageClasses = classNames(
     classes.imgRaised,
-    classes.imgRoundedCircle,
     classes.imgFluid
   );
+  const settings = {
+      className: "center",
+      centerMode: true,
+      infinite: true,
+      slidesToShow: 3,
+      centerPadding: "60px",
+      speed: 500, 
+      autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false
+        }
+      }
+    ]
+  };
+  
   return (
     <div className={classes.section}>
-      <h2 className={classes.title}>Here is our team</h2>
+      <h2 className={classes.title}>Partners & Promotors</h2>
+      <br/>
       <div>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={4}>
-            <Card plain>
-              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={team1} alt="..." className={imageClasses} />
-              </GridItem>
-              <h4 className={classes.cardTitle}>
-                Gigi Hadid
-                <br />
-                <small className={classes.smallTitle}>Model</small>
-              </h4>
-              <CardBody>
-                <p className={classes.description}>
-                  You can write here details about one of your team members. You
-                  can give more details about what they do. Feel free to add
-                  some <a href="#pablo">links</a> for people to be able to
-                  follow them outside the site.
-                </p>
-              </CardBody>
-              <CardFooter className={classes.justifyCenter}>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-twitter"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-instagram"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-facebook"} />
-                </Button>
-              </CardFooter>
-            </Card>
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <Card plain>
-              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={team2} alt="..." className={imageClasses} />
-              </GridItem>
-              <h4 className={classes.cardTitle}>
-                Christian Louboutin
-                <br />
-                <small className={classes.smallTitle}>Designer</small>
-              </h4>
-              <CardBody>
-                <p className={classes.description}>
-                  You can write here details about one of your team members. You
-                  can give more details about what they do. Feel free to add
-                  some <a href="#pablo">links</a> for people to be able to
-                  follow them outside the site.
-                </p>
-              </CardBody>
-              <CardFooter className={classes.justifyCenter}>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-twitter"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-linkedin"} />
-                </Button>
-              </CardFooter>
-            </Card>
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <Card plain>
-              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={team3} alt="..." className={imageClasses} />
-              </GridItem>
-              <h4 className={classes.cardTitle}>
-                Kendall Jenner
-                <br />
-                <small className={classes.smallTitle}>Model</small>
-              </h4>
-              <CardBody>
-                <p className={classes.description}>
-                  You can write here details about one of your team members. You
-                  can give more details about what they do. Feel free to add
-                  some <a href="#pablo">links</a> for people to be able to
-                  follow them outside the site.
-                </p>
-              </CardBody>
-              <CardFooter className={classes.justifyCenter}>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-twitter"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-instagram"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-facebook"} />
-                </Button>
-              </CardFooter>
-            </Card>
-          </GridItem>
-        </GridContainer>
+          <Carousel {...settings}>
+            <GridItem xs={12} sm={12} md={12}>
+                <div>
+                    <img src={ssclogo}  style={{maxWidth:"100%"}} className="slick-image" />
+                    <h6 className={classes.description}><strong>SHAHEED SUKHDEV COLLEGE OF BUSINESS STUDIES, UNIVERSITY OF DELHI</strong></h6>
+                </div>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={12}>
+                <div>
+                    <img src={nitplogo} height="300px"  style={{maxWidth:"100%"}} className="slick-image" />
+                    <h6 className={classes.description}><strong>NATIONAL INSTITUTE OF TECHNOLOGY PATNA (NITP)</strong></h6>
+                </div>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={12}>
+                <div >
+                    <img src={npclogo} height="300px" style={{maxWidth:"100%"}} className="slick-image" />
+                    <h6 className={classes.description}><strong> NATIONAL PRODUCTIVITY COUNCIL </strong></h6>
+                </div>
+            </GridItem> 
+            <GridItem xs={12} sm={12} md={12}>
+                <div >
+                    <img src={srgelogo} height="300px" style={{maxWidth:"100%"}} className="slick-image" />
+                    <h6 className={classes.description}><strong>SCIENTIFIC RESEARCH GROUP IN EGYPT (SRGE)</strong></h6>
+                </div>
+            </GridItem> 
+            <GridItem xs={12} sm={12} md={12}>
+                <div>
+                    <img src={setitlogo} height="300px" style={{maxWidth:"100%"}} className="slick-image" />
+                    <h6 className={classes.description}><strong>SCIENCES of ELECTRONICS, TECHNOLOGIES of INFORMATION & TELECOMMUNICATIONS (SETIT) , TUNISIA</strong></h6>
+                </div>
+            </GridItem> 
+            <GridItem xs={12} sm={12} md={12}>
+                <div>
+                    <img src={dilogo} height="300px" style={{maxWidth:"100%"}} className="slick-image" />
+                    <h6 className={classes.description}><strong>DIGITAL INDIA</strong></h6>
+                </div>
+            </GridItem> 
+            <GridItem xs={12} sm={12} md={12}>
+                <div>
+                    <img src={uilogo} height="300px" style={{maxWidth:"100%"}} className="slick-image" />
+                    <h6 className={classes.description}><strong>UNIVERSAL INNOVATORS , INDIA</strong></h6>
+                </div>
+            </GridItem> 
+            <GridItem xs={12} sm={12} md={12}>
+                <div>
+                    <img src={minlogo} height="300px" style={{maxWidth:"100%"}} className="slick-image" />
+                    <h6 className={classes.description}><strong>MINISTRY OF ELECTRONICS & INFORMAION TECHNOLOGY , GOVERNMENT OF INDIA </strong></h6>
+                </div>
+            </GridItem>   
+            <GridItem xs={12} sm={12} md={12}>
+                <div>
+                    <img src={dmrlogo} height="300px" style={{maxWidth:"100%"}} className="slick-image" />
+                    <h6 className={classes.description}><strong>DMR Hydroengineering & Infrastructures Ltd.</strong></h6>
+                </div>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={12}>
+                <div>
+                    <img src={pkslogo} height="300px" style={{maxWidth:"100%"}} className="slick-image" />
+                    <h6 className={classes.description}><strong>PKS INFRA ENGINEERS PRIVATE LIMTED</strong></h6>
+                </div>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={12}>
+                <div>
+                    <img src={autologo} height="300px" style={{maxWidth:"100%"}} className="slick-image" />
+                    <h6 className={classes.description}><strong>AUTODEALZ.IN</strong></h6>
+                </div>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={12}>
+                <div>
+                    <img src={callogo} height="300px" style={{maxWidth:"100%"}} className="slick-image" />
+                    <h6 className={classes.description}><strong>CALIBRE</strong></h6>
+                </div>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={12}>
+                <div>
+                    <img src={plucklogo} height="300px" style={{maxWidth:"100%"}} className="slick-image" />
+                    <h6 className={classes.description}><strong>PLUCK ENGINEERING PRIVATE LIMITED</strong></h6>
+                </div>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={12}>
+                <div>
+                    <img src={rtmlogo} height="300px" style={{maxWidth:"100%"}} className="slick-image" />
+                    <h6 className={classes.description}><strong> RTM ENGINEERS PVT. LTD.</strong></h6>
+                </div>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={12}>
+                <div>
+                    <img src={gvlogo} height="300px" style={{maxWidth:"100%"}} className="slick-image" />
+                    <h6 className={classes.description}><strong>GENOMIC VALLEY BIOTECH LIMITED</strong></h6>
+                </div>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={12}>
+                <div>
+                    <img src={sgrtlogo} height="300px" style={{maxWidth:"100%"}} className="slick-image" />
+                    <h6 className={classes.description}><strong>SCIENTIFIC GROUP FOR RESEARCH AND TECHNOLOGY</strong></h6>
+                </div>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={12}>
+                <div>
+                    <img src={negdlogo} height="300px" style={{maxWidth:"100%"}} className="slick-image" />
+                    <h6 className={classes.description}><strong>NATIONAL E-GOVERNANCE DIVISION</strong></h6>
+                </div>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={12}>
+                <div>
+                    <img src={thinklogo} height="300px" style={{maxWidth:"100%"}} className="slick-image" />
+                    <h6 className={classes.description}><strong>THINK PARYAVARAN : SAVE EARTH SAVE GENERATION </strong></h6>
+                </div>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={12}>
+                <div>
+                    <img src={spainlogo} height="300px" style={{maxWidth:"100%"}} className="slick-image" />
+                    <h6 className={classes.description}><strong>UNIVERSITY OF VALLADOLID SPAIN</strong></h6>
+                </div>
+            </GridItem>
+          </Carousel>
       </div>
     </div>
   );
