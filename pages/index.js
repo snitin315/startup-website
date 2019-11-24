@@ -22,6 +22,9 @@ import ProductSection from "pages-sections/LandingPage-Sections/ProductSection.j
 import TeamSection from "pages-sections/LandingPage-Sections/TeamSection.js";
 import WorkSection from "pages-sections/LandingPage-Sections/WorkSection.js";
 
+//images
+import rocket from "../assets/img/rocket2.gif"
+
 const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
@@ -29,12 +32,16 @@ const useStyles = makeStyles(styles);
 export default function LandingPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
+  const flex ={
+    display : "flex",
+    alignItems : "center"
+  }
   return (
     <div>
       <Header
         color="transparent"
         routes={dashboardRoutes}
-        brand="NextJS Material Kit"
+        brand="StartUp"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
@@ -43,20 +50,14 @@ export default function LandingPage(props) {
         }}
         {...rest}
       />
-    <Parallax filter responsive image={require("assets/img/landing-bg.jpg")}>
+    <Parallax filter responsive style={{backgroundColor:"#28a796"}}>
         <div className={classes.container}>
-          <GridContainer>
+          <GridContainer style={flex}>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Your Story Starts With Us.</h1>
-              <h4>
-                Every landing page needs a small description after the big bold
-                title, that{"'"}s why we added this text here. Add here all the
-                information that can make you or your product create the first
-                impression.
-              </h4>
+              <h1 className={classes.title}>Where StartUp Meet Investors</h1>
               <br />
               <Button
-                color="danger"
+                color="white"
                 size="lg"
                 href="Register Here"
                 target="_blank"
@@ -65,6 +66,9 @@ export default function LandingPage(props) {
                 <i className="fas fa-play" />
                 Register Here
               </Button>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={6}>
+              <img src ={rocket} style={{maxWidth:"100%", opacity:"0.8", borderRadius:" 100% 100% 0% 0%"}}/>
             </GridItem>
           </GridContainer>
         </div>
