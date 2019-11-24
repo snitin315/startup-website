@@ -78,7 +78,14 @@ export default class MyApp extends App {
     return (
       <React.Fragment>
         <Head>
-          <title>NextJS Material Kit by Creative Tim</title>
+          <title>Startup Meet Investors</title>
+          <meta name= "description" content= " Universal-Inovators : Where StartUp Meets Investors.UI is a private and autonomous body promoting research-based innovative activities all over the globe for the overall growth of human welfare and environment."/>
+          <meta name="theme-color" content="#000" />
+          <meta name="Author" content = "Nitin Kumar"/>
+          <meta name = "keywords" content = "universal inovators , startup , funding , startup funding, investors " />
+          <meta property="og:title" content="Universal-Inovators : Where Startup Meets Investors" />
+          <meta property="og:site_name" content="Universal-Inovators" />
+          <meta property="og:url" content="http://startup.universal-inovators.com" />
         </Head>
         <Component {...pageProps} />
       </React.Fragment>
