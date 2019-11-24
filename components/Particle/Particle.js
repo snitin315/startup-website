@@ -67,8 +67,8 @@ const ParticlesContainer = (props) => {
                     },
                     "move": {
                         "enable": true,
-                        "speed": 6,
-                        "direction": "bottom-left",
+                        "speed": 4,
+                        "direction": "bottom",
                         "random": false,
                         "straight": false,
                         "out_mode": "out",
