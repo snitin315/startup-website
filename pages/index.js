@@ -25,6 +25,7 @@ import Category from "pages-sections/LandingPage-Sections/Category.js";
 
 //images
 import rocket from "../assets/img/rocket2.gif"
+import EventTracks from "../pages-sections/About/EventTracks";
 
 const dashboardRoutes = [];
 
@@ -62,7 +63,7 @@ export default function LandingPage(props) {
           <GridContainer style={flex}>
             <GridItem xs={12} sm={12} md={6}>
               <h2 className={classes.title}><CharPose text="Where StartUp Meet Investors" /></h2>
-              <h6 className={classes.title}>Let your dreams come true || Your Story Starts with us</h6>
+              <h6 className={classes.title} style={{marginTop : "-10px"}}>Let your dreams come true || Your Story Starts with us</h6>
               <br />
               <Button
                 style={btn}
@@ -77,6 +78,7 @@ export default function LandingPage(props) {
               </Button>
             </GridItem>
             <GridItem xs={12} sm={12} md={6}>
+              <br/>
               <img src ={rocket} style={{maxWidth:"100%", opacity:"0.8", borderRadius:" 100% 100% 0% 0%"}}/>
             </GridItem>
           </GridContainer>
@@ -85,6 +87,7 @@ export default function LandingPage(props) {
       <div className={classNames(classes.main)}>
         <div className={classes.container}>
           <ProductSection />
+          <EventTracks/>
           <TeamSection />
           <Category />
         </div>

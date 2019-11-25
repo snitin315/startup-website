@@ -18,7 +18,8 @@ import { cardTitle } from "assets/jss/nextjs-material-kit.js";
 const useStyles = makeStyles(styles);
 const awards = {
     display : 'flex',
-    justifyContent : "center"
+    justifyContent : "center",
+    textAlign: "center"
   }
 
   const cardstyles = {
@@ -33,9 +34,9 @@ export default function EventTracks() {
   const cards = useCardStyles();
   return (
      <div>
-          <h3 className = {classes.title}> Event Tracks</h3>
+          <h3 className = {classes.title} style={{textAlign: "center"}}> Event Tracks</h3>
 
-        <GridContainer style={awards}>
+        <GridContainer style={awards} >
 
         <Fade left >
         <GridItem xs={12} sm={6} md={3}>
