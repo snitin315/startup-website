@@ -1,0 +1,17 @@
+import React, {Component, Children} from 'react';
+import styles from "assets/jss/nextjs-material-kit/pages/landingPage.js";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(styles);
+const ServiceBox = (props) => {
+    const classes = useStyles();
+    return ( 
+        <div className="box">
+            <div className="icon"><a href={props.link}><i class={props.icon}></i></a></div>
+            <h4 className="title"><a href={props.link}>{props.title}</a></h4>
+            <p className={classes.description} >{props.description}</p>
+        </div>
+    )
+}
+
+export default ServiceBox ;
