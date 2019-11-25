@@ -8,13 +8,14 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import styles from "assets/jss/nextjs-material-kit/pages/landingPageSections/productStyle.js";
 import Fade from 'react-reveal/Fade';
-
+import ServiceBox from "components/ServiceBox/ServiceBox.js"
 
 
 //images
 import session from "assets/img/session.svg"
 import session2 from "assets/img/startup-about-2.jpg"
 import EventTracks from "./EventTracks";
+
 
 const useStyles = makeStyles(styles);
 const flex = {
@@ -65,7 +66,37 @@ export default function AboutDetails() {
 
       <h3 className={classes.title}>Awards & Prizes </h3>
       <br/>       
-      
+      <GridContainer>
+          <GridItem xs={12} sm={12} md={4}>
+            <Fade up>
+              <ServiceBox
+              icon = "fas fa-trophy"
+              title = "Start-up of the year Award"
+              description = "The start-up with the greatest growth and success rate."
+              />
+            </Fade>
+          </GridItem>
+                    
+          <GridItem xs={12} sm={12} md={4}>
+            <Fade up delay={500}>
+              <ServiceBox 
+              icon = "fas fa-trophy"
+              title = "Young Innovator Award"
+              description = "Best Student Start-Up"
+              />
+            </Fade>
+          </GridItem>
+           
+            <GridItem xs={12} sm={12} md={4}>
+              <Fade up delay={1000}>
+                <ServiceBox 
+                  icon = "fas fa-trophy"
+                  title = "Womanovator Award"
+                  description = "Best of a start-up/innovative idea led by a woman."
+                  />
+                </Fade>
+            </GridItem>
+          </GridContainer>
     
 
         
@@ -89,7 +120,7 @@ export default function AboutDetails() {
 
       </GridItem>
       </GridContainer>
-     
+    
       <EventTracks/>
      
       
