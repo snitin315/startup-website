@@ -12,7 +12,7 @@ class MyDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-          <meta name="theme-color" content="#000000" />
+          <meta name="theme-color" content="#28a796" />
           <link rel="shortcut icon" href={require("assets/img/favicon.png")} />
           <link
             rel="apple-touch-icon"
