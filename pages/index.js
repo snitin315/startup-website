@@ -25,7 +25,7 @@ import Category from "pages-sections/LandingPage-Sections/Category.js";
 
 //images
 import rocket from "../assets/img/rocket2.gif"
-import EventTracks from "../pages-sections/About/EventTracks";
+
 
 const dashboardRoutes = [];
 
@@ -87,7 +87,6 @@ export default function LandingPage(props) {
       <div className={classNames(classes.main)}>
         <div className={classes.container}>
           <ProductSection />
-          <EventTracks/>
           <TeamSection />
           <Category />
         </div>

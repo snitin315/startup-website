@@ -7,6 +7,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import styles from "assets/jss/nextjs-material-kit/pages/landingPageSections/productStyle.js";
+import Fade from 'react-reveal/Fade';
+import ServiceBox from "components/ServiceBox/ServiceBox.js"
+import EventTracks from "../About/EventTracks";
 
 //images
 import sideImage from "assets/img/startup2.gif"
@@ -24,7 +27,9 @@ export default function ProductSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={10}>
+          <Fade>
           <h3 className={classes.title}>ICICC Startup Event: Where Startup Meets Investor</h3>
+          </Fade>
           <h5 className={classes.description}>
           ICICC is a non-profit organization under the umbrella of Universal Innovator. It has successfully conducted numerous technical conferences, FDPs and workshops. It has also been parts of Nasa hackthons and has members who have successfully organized and prepared teams for AICTE’s Smart India Hackathons. It has support of many reputed international and national organizations. ICICC enjoys support of many top private companies, research labs, government agencies, Private and Government Banks, funding agencies, publishing houses and many more other organizations.
           </h5>
@@ -46,6 +51,41 @@ export default function ProductSection() {
           </p>
         </GridItem>
       </GridContainer>
+      <h3 className={classes.title}>Awards & Prizes </h3>
+      <br/>       
+      <GridContainer>
+          <GridItem xs={12} sm={12} md={4}>
+            <Fade>
+              <ServiceBox
+              icon = "fas fa-trophy"
+              title = "Start-up of the year Award"
+              description = "The start-up with the greatest growth and success rate."
+              />
+            </Fade>
+          </GridItem>
+                    
+          <GridItem xs={12} sm={12} md={4}>
+            <Fade delay={500}>
+              <ServiceBox 
+              icon = "fas fa-trophy"
+              title = "Young Innovator Award"
+              description = "Best Student Start-Up"
+              />
+            </Fade>
+          </GridItem>
+           
+            <GridItem xs={12} sm={12} md={4}>
+              <Fade delay={1000}>
+                <ServiceBox 
+                  icon = "fas fa-trophy"
+                  title = "Womanovator Award"
+                  description = "Best of a start-up/innovative idea led by a woman."
+                  />
+                </Fade>
+            </GridItem>
+          </GridContainer>
+
+          <EventTracks/>
     </div>
   );
 }
