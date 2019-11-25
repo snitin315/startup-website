@@ -26,7 +26,7 @@ export default function HeaderLinks(props) {
           color="transparent"
           className={classes.navLink}
         >
-          <Home className={classes.icons} /> Home
+          <Home className={classes.icons} /> <strong>Home</strong>
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -35,7 +35,7 @@ export default function HeaderLinks(props) {
           color="transparent"
           className={classes.navLink}
         >
-          <Apps className={classes.icons} /> About
+          <Apps className={classes.icons} /> <strong>About</strong>
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -44,7 +44,7 @@ export default function HeaderLinks(props) {
           color="transparent"
           className={classes.navLink}
         >
-          <CheckBox className={classes.icons} /> Eligibilty-Criteria
+          <CheckBox className={classes.icons} /> <strong>Eligibilty-Criteria</strong>
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -53,7 +53,7 @@ export default function HeaderLinks(props) {
           color="transparent"
           className={classes.navLink}
         >
-          <PersonAdd className={classes.icons} /> Application Procedure
+          <PersonAdd className={classes.icons} /> <strong>Application Procedure</strong>
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -62,7 +62,7 @@ export default function HeaderLinks(props) {
           color="transparent"
           className={classes.navLink}
         >
-          <Money className={classes.icons} /> Funding Details
+          <Money className={classes.icons} /> <strong>Funding Details</strong>
         </Button>
       </ListItem>
       
