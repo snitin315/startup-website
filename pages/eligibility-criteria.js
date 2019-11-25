@@ -19,7 +19,7 @@ import CharPose from "components/Charpose/Charpose.js"
 import styles from "assets/jss/nextjs-material-kit/pages/landingPage.js";
 
 // Sections for this page
-
+import Details from "../pages-sections/Eligibility/Details.js";
 
 //images
 import startup from "../assets/img/startup.gif"
@@ -82,7 +82,7 @@ export default function Eligibility(props) {
     </Parallax> 
       <div className={classNames(classes.main)}>
         <div className={classes.container}>
-         
+          <Details/>
         </div>
       </div>
       <Footer />
