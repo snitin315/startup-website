@@ -19,7 +19,7 @@ import CharPose from "components/Charpose/Charpose.js"
 import styles from "assets/jss/nextjs-material-kit/pages/landingPage.js";
 
 // Sections for this page
-import ProductSection from "pages-sections/LandingPage-Sections/ProductSection.js";
+import AboutDetails from "pages-sections/About/AboutDetails.js";
 
 
 //images
@@ -84,7 +84,7 @@ export default function LandingPage(props) {
     </Parallax> 
       <div className={classNames(classes.main)}>
         <div className={classes.container}>
-         
+         <AboutDetails/>
         </div>
       </div>
       <Footer />
