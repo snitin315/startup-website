@@ -12,7 +12,7 @@ import ServiceBox from "components/ServiceBox/ServiceBox.js"
 import EventTracks from "../About/EventTracks";
 
 //images
-import sideImage from "assets/img/startup2.gif"
+import sideImage from "assets/img/startup.jpg"
 
 const useStyles = makeStyles(styles);
 const flex = {
