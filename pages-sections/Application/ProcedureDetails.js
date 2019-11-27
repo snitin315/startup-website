@@ -48,7 +48,7 @@ export default function Details(){
         <GridContainer>
             <GridItem xs={12} sm={10} md={6}>
               <div style={{display:"flex" , justifyContent : "center"}}>
-                <Button size="lg" color="primary" href="/startup-application-form" target="-blank" type="button"> <i class="fas fa-angle-right"></i> <strong>Click Here To Fill the Application Form</strong> </Button>
+                <Button size="lg" color="primary" href="/application/form" target="_blank" type="button"> <i class="fas fa-angle-right"></i> <strong>Click Here To Fill the Application Form</strong> </Button>
               </div>
             </GridItem>
             <GridItem xs={12} sm={10} md={6}>

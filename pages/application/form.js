@@ -19,7 +19,7 @@ import CharPose from "components/Charpose/Charpose.js"
 import styles from "assets/jss/nextjs-material-kit/pages/landingPage.js";
 
 // Sections for this page
-import Details from "../../pages-sections/Application/ProcedureDetails";
+
 
 //images
 import rocket from "../../assets/img/rocket2.gif"
@@ -61,30 +61,19 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <GridContainer style={flex}>
             <GridItem xs={12} sm={12} md={6}>
-              <h2 className={classes.title}><CharPose text="Application Procedure" /></h2>
-              <h6 className={classes.title} style={{marginTop : "-10px"}}>Let your dreams come true || Your Story Starts with us</h6>
+              <h2 className={classes.title}><CharPose text="Application Form" /></h2>
+              <h6 className={classes.title} style={{marginTop : "-10px"}}> Fill the application form here and pay the registration fees using the button below.</h6>
               <br />
               <Button
                 style={btn}
                 color="white"
-                size="md"
-                href="/application/form"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fas fa-pencil-alt" />
-               <b style={{color:"#888"}}>Apply Now</b> 
-              </Button>
-              <Button
-                style={btn}
-                color="white"
-                size="md"
+                size="lg"
                 href="https://www.scupo.in/event/3rd-international-conference-on-innovative-computing-communication/#bookticket"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i class="fas fa-ticket-alt"/>
-               <b style={{color:"#888"}}>Pay Fees</b> 
+               <b style={{color:"#888"}}>Pay Registration Fees</b> 
               </Button>
             </GridItem>
             <GridItem xs={12} sm={12} md={6}>
@@ -96,7 +85,7 @@ export default function LandingPage(props) {
     </Parallax> 
       <div className={classNames(classes.main)}>
         <div className={classes.container}>
-            <Details/>
+           
         </div>
       </div>
       <Footer />
