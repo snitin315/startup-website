@@ -7,7 +7,7 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 
 // @material-ui/icons
-import { Apps,Home,PersonAdd,CheckBox,Money,People} from "@material-ui/icons";
+import { Apps,Home,PersonAdd,CheckBox,Money,People, Create} from "@material-ui/icons";
 
 // core components
 import Button from "components/CustomButtons/Button.js";
@@ -55,17 +55,16 @@ export default function HeaderLinks(props) {
         >
           <PersonAdd className={classes.icons} /> <strong>Application Procedure</strong>
         </Button>
-      </ListItem>
+      </ListItem>  
       <ListItem className={classes.listItem}>
         <Button
-          href="/funding-details"
+          href="/application/form"
           color="transparent"
           className={classes.navLink}
         >
-          <Money className={classes.icons} /> <strong>Funding Details</strong>
+          <Create className={classes.icons} /> <strong>Apply Now</strong>
         </Button>
-      </ListItem>
-      
+      </ListItem>      
     </List>
   );
 }
