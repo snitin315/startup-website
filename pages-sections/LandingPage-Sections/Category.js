@@ -58,6 +58,7 @@ export default function About() {
       <br/>
       <NavPills
       color="primary"
+      alignCenter
       tabs={[
         {
           tabButton: "Category A",
