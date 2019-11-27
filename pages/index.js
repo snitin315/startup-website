@@ -25,7 +25,7 @@ import Category from "pages-sections/LandingPage-Sections/Category.js";
 
 //images
 import rocket from "../assets/img/rocket2.gif"
-import Funding from "../pages-sections/LandingPage-Sections/Funding";
+
 
 
 const dashboardRoutes = [];
@@ -89,7 +89,6 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <ProductSection />
           <TeamSection />
-          <Funding/>
           <Category />
         </div>
       </div>

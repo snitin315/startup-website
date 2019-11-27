@@ -10,6 +10,7 @@ import styles from "assets/jss/nextjs-material-kit/pages/landingPageSections/pro
 import Fade from 'react-reveal/Fade';
 import ServiceBox from "components/ServiceBox/ServiceBox.js"
 import EventTracks from "../About/EventTracks";
+import Funding from "./Funding";
 
 //images
 import sideImage from "assets/img/startup.jpg"
@@ -84,7 +85,7 @@ export default function ProductSection() {
                 </Fade>
             </GridItem>
           </GridContainer>
-
+          <Funding/>
           <EventTracks/>
     </div>
   );
