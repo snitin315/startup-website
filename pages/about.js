@@ -67,11 +67,11 @@ export default function LandingPage(props) {
                 style={btn}
                 color="white"
                 size="md"
-                href="/application-form"
+                href="/application/form"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fas fa-play" />
+                <i className="fas fa-pencil-alt" />
                <b style={{color:"#888"}}>Register Today</b> 
               </Button>
             </GridItem>
