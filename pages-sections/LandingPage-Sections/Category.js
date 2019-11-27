@@ -55,7 +55,6 @@ export default function About() {
 
     <div className={classes.section} style={{marginTop:"-100px"}} >
       <h3 className={classes.title}>Core Fields of Research for the Start-Up </h3>
-      <br/>
       <NavPills
       color="primary"
       alignCenter
@@ -233,7 +232,6 @@ export default function About() {
 
         {tabButton: "Category D",
           tabContent: (
-            <span>
               <GridContainer style = {flex} justify="center">
                
               <GridItem xs={12} sm={12} md={6}>
@@ -274,7 +272,7 @@ export default function About() {
                 <ListStyle text = "Candidates having any unique innovative idea other than mentioned categories can submit their application in this category."/>                                            
               </GridItem>       
               </GridContainer>
-            </span>
+       
           )
         }
       ]}

@@ -7,7 +7,7 @@ import {Assessment, TrendingUp, MergeType} from "@material-ui/icons";
 import GridItem from "components/Grid/GridItem.js";
 
 
-const flex = {display : "flex", alignItems : "center",textalign : "justify"}
+const flex = {display : "flex", alignItems : "center",textAlign : "justify"}
 function ListStyle(props){
     const classes = useStyles(); 
     return (
@@ -32,7 +32,7 @@ export default function Example(){
           tabButton: "Early Stage",
           tabIcon: Assessment,
           tabContent: (
-              <GridItem xs={12} sm={12} md={12} style={{textAlign:"justify"}}>
+              <GridItem xs={12} sm={12} md={12} style={{textAlign:"justify", margin:"50px auto"}}>
                   <h6 className={classes.description} style={{textAlign:"justify"}}> In Early Stage funding, the capital committed is up to the amount of INR Rs 20 Lakhs. This round is for start-ups who have formulated a MVP or Beta Product and need help to reach Product Launch.</h6>
                   <li className={classes.description} style={{textAlign:"justify",listStyleType:"none"}}> <b>To be Eligible for Early Stage Funding:</b></li>
                   <ListStyle text = "Startup must have a functioning Minimum Viable Product or Beta Product."/> 
@@ -46,7 +46,7 @@ export default function Example(){
           tabIcon: MergeType,
           tabContent: (
             <span>
-              <GridItem xs={12} sm={12} md={12} style={{textAlign:"justify"}}>
+              <GridItem xs={12} sm={12} md={12} style={{textAlign:"justify", margin:"50px auto"}}>
                   <h6 className={classes.description} style={{textAlign:"justify"}}>In Seed Stage funding, the capital committed is in range of the amount of INR 30 Lakhs to INR 1 Crore. This round is for start-ups who have completed a product and have officially launched their services.</h6>
                   <li className={classes.description} style={{textAlign:"justify",listStyleType:"none"}}> <b>To be Eligible for Seed Stage Funding:</b></li>
                   <ListStyle text = "Startup has launched their Product and Service and have successfully gained traction. Start-ups which have conducted a Successful Pilot Test before the official launch of the product will also be considered."/> 
@@ -60,7 +60,7 @@ export default function Example(){
           tabButton: "Growth Stage",
           tabIcon: TrendingUp,
           tabContent: (
-            <GridItem xs={12} sm={12} md={12} style={{textAlign:"justify"}}>
+            <GridItem xs={12} sm={12} md={12} style={{textAlign:"justify", margin:"40px auto"}}>
                   <h6 className={classes.description} style={{textAlign:"justify"}}>In Growth Stage funding, the capital committed is in amounts above INR 1 Crore. This round is for start-ups who have sufficient revenue and Traction. Start-ups that require help in raising Series A, B etc. are eligible for this round.</h6>
                   <li className={classes.description} style={{textAlign:"justify",listStyleType:"none"}}> <b>To be Eligible for Growth Stage Funding:</b></li>
                   <ListStyle text = "Startup has launched their Product and Service and have successfully gained traction."/> 
