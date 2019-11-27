@@ -19,7 +19,7 @@ import CharPose from "components/Charpose/Charpose.js"
 import styles from "assets/jss/nextjs-material-kit/pages/landingPage.js";
 
 // Sections for this page
-
+import Details from "../../pages-sections/Application/ProcedureDetails";
 
 //images
 import rocket from "../../assets/img/rocket2.gif"
@@ -75,6 +75,17 @@ export default function LandingPage(props) {
                 <i className="fas fa-pencil-alt" />
                <b style={{color:"#888"}}>Apply Now</b> 
               </Button>
+              <Button
+                style={btn}
+                color="white"
+                size="md"
+                href="https://www.scupo.in/event/3rd-international-conference-on-innovative-computing-communication/#bookticket"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fas fa-ticket-alt"/>
+               <b style={{color:"#888"}}>Pay Fees</b> 
+              </Button>
             </GridItem>
             <GridItem xs={12} sm={12} md={6}>
               <br/>
@@ -85,7 +96,7 @@ export default function LandingPage(props) {
     </Parallax> 
       <div className={classNames(classes.main)}>
         <div className={classes.container}>
-          
+            <Details/>
         </div>
       </div>
       <Footer />
